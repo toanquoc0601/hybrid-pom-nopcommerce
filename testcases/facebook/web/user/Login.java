@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 public class Login {
 	@Test //Test Method
 	public void Login_01_InvalidEmail() {
+		System.out.println("ABCDE");
 	}
 	@Test
 	public void Login_02_IncorrectEmail() {
