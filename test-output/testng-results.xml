@@ -1,47 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Nop Commerce" duration-ms="40" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
+  <suite name="Default suite" duration-ms="14198" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:35Z">
     <groups>
     </groups>
-    <test name="Run on Firefox" duration-ms="40" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-      <class name="facebook.web.user.Validate">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:facebook.web.user.Validate@5034c75a]" name="beforeClass" is-config="true" duration-ms="7" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
+    <test name="Default test" duration-ms="14198" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:35Z">
+      <class name="com.nopcommerce.user.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="beforeClass" is-config="true" duration-ms="2977" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:facebook.web.user.Validate@5034c75a]" name="f" duration-ms="4" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
+        <test-method status="PASS" signature="Register()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="Register" duration-ms="11193" started-at="2022-09-23T03:08:24Z" finished-at="2022-09-23T03:08:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:facebook.web.user.Validate@5034c75a]" name="afterClass" is-config="true" duration-ms="0" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="afterClass" is-config="true" duration-ms="0" started-at="2022-09-23T03:08:35Z" finished-at="2022-09-23T03:08:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- facebook.web.user.Validate -->
-      <class name="facebook.web.user.Login">
-        <test-method status="PASS" signature="Login_01_InvalidEmail()[pri:0, instance:facebook.web.user.Login@396a51ab]" name="Login_01_InvalidEmail" duration-ms="1" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_01_InvalidEmail -->
-        <test-method status="PASS" signature="Login_02_IncorrectEmail()[pri:0, instance:facebook.web.user.Login@396a51ab]" name="Login_02_IncorrectEmail" duration-ms="1" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_02_IncorrectEmail -->
-        <test-method status="PASS" signature="Login_03_InvalidPass()[pri:0, instance:facebook.web.user.Login@396a51ab]" name="Login_03_InvalidPass" duration-ms="0" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_03_InvalidPass -->
-        <test-method status="PASS" signature="Login_04_IncorrectPass()[pri:0, instance:facebook.web.user.Login@396a51ab]" name="Login_04_IncorrectPass" duration-ms="1" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_04_IncorrectPass -->
-        <test-method status="PASS" signature="Login_04_ValidEmailAndPass()[pri:0, instance:facebook.web.user.Login@396a51ab]" name="Login_04_ValidEmailAndPass" duration-ms="1" started-at="2022-09-22T14:26:39Z" finished-at="2022-09-22T14:26:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_04_ValidEmailAndPass -->
-      </class> <!-- facebook.web.user.Login -->
-    </test> <!-- Run on Firefox -->
-  </suite> <!-- Nop Commerce -->
+      </class> <!-- com.nopcommerce.user.Level_01_Register_Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

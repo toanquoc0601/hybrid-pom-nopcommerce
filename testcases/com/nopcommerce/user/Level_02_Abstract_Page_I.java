@@ -14,11 +14,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Level_01_Register_Login {
+import commons.AbstractPage;
+
+public class Level_02_Abstract_Page_I {
 	WebDriver driver;
 	WebDriverWait explicitWait;
 	String projectPath = System.getProperty("user.dir");
 	Select select;
+	AbstractPage abtractPage;
+	
 	public String firstName = "Toan", 
 			lastName = "Quoc", 
 			dateOfBirthDay = "6", 
@@ -38,6 +42,9 @@ public class Level_01_Register_Login {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com");
 		driver.manage().window().maximize();
+		abtractPage.openPageUrl(driver, "");
+		String pageURL = abtractPage.getCurrenPageURL(driver);
+		
 	}
 
 	@Test
