@@ -1,6 +1,6 @@
 package pageUIs;
 
-public class RegisterPageUI {
+public class CustumerInforUI {
 	public static final String GENDER_MALE_RADIO = "//input[@id='gender-male']";
 	public static final String FISTNAME_TEXBOX = "//input[@id='FirstName']";
 	public static final String LASTNAME_TEXBOX = "//input[@id='LastName']";
@@ -14,5 +14,4 @@ public class RegisterPageUI {
 	public static final String REGISTER_BUTTON = "//button[@id='register-button']";
 	public static final String SUCCESS_MESSAGE = "//div[contains(text(),'Your registration completed')]";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
-	
 }

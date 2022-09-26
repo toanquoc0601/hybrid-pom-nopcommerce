@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14198" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:35Z">
+  <suite name="Default suite" duration-ms="15262" started-at="2022-09-26T19:44:09Z" finished-at="2022-09-26T19:44:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14198" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:35Z">
-      <class name="com.nopcommerce.user.Level_01_Register_Login">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="beforeClass" is-config="true" duration-ms="2977" started-at="2022-09-23T03:08:21Z" finished-at="2022-09-23T03:08:24Z">
+    <test name="Default test" duration-ms="15262" started-at="2022-09-26T19:44:09Z" finished-at="2022-09-26T19:44:25Z">
+      <class name="com.nopcommerce.user.Level_03_Register_Login_Page_Object">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.nopcommerce.user.Level_03_Register_Login_Page_Object@58651fd0]" name="beforeClass" is-config="true" duration-ms="3668" started-at="2022-09-26T19:44:09Z" finished-at="2022-09-26T19:44:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="Register()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="Register" duration-ms="11193" started-at="2022-09-23T03:08:24Z" finished-at="2022-09-23T03:08:35Z">
+        <test-method status="PASS" signature="Register_Login_Verify_()[pri:0, instance:com.nopcommerce.user.Level_03_Register_Login_Page_Object@58651fd0]" name="Register_Login_Verify_" duration-ms="10929" started-at="2022-09-26T19:44:13Z" finished-at="2022-09-26T19:44:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Register -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_01_Register_Login@58651fd0]" name="afterClass" is-config="true" duration-ms="0" started-at="2022-09-23T03:08:35Z" finished-at="2022-09-23T03:08:35Z">
+        </test-method> <!-- Register_Login_Verify_ -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_03_Register_Login_Page_Object@58651fd0]" name="afterClass" is-config="true" duration-ms="637" started-at="2022-09-26T19:44:24Z" finished-at="2022-09-26T19:44:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.user.Level_01_Register_Login -->
+      </class> <!-- com.nopcommerce.user.Level_03_Register_Login_Page_Object -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
