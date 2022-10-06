@@ -14,6 +14,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
+
 import commons.AbstractPage;
 
 public class Level_02_Abstract_Page_I extends AbstractPage{
@@ -30,13 +32,19 @@ public class Level_02_Abstract_Page_I extends AbstractPage{
 			email = generateEmail(),
 			companyName = "Company", 
 			Password = "123123";
-
+	@Parameter
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass(String browserName) {
 		
 		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		if(browserName.equals("firefox_ui")) {
+			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
+			driver = new ChromeDriver();
+		}else if(browserName.equals("chrome_ui")) {
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDriver\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+		
 		explicitWait = new WebDriverWait(driver, 30);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com");
