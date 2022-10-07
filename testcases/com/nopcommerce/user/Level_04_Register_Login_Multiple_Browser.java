@@ -38,13 +38,12 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 	}
 
 	@Test
-	public void Register_Login_Verify_() {
+	public void TC_01_Register() {
 		// Register
 		homePage = new HomePageObject(driver);
 		homePage.clickToRegisterLink();
 		registerPage = new RegisterPageObject(driver);
 		driver.findElement(By.xpath("//input[@id='gender-male']")).click();
-
 		registerPage.clickToGenderMailRadioButton();
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
@@ -58,8 +57,11 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		registerPage.clickToLogoutLink();
-
 		homePage = new HomePageObject(driver);
+	}
+
+	@Test
+	public void TC_02_Login() {
 		// Login
 		homePage.clickToLoginLink();
 		loginPage = new LoginPageObject(driver);
@@ -70,24 +72,21 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 		homePage = new HomePageObject(driver);
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLoginLinkDisplayed());
+	}
+	@Test
+	public void TC_03_Verify_Account() {
+	// View my Account
+	homePage.clickToMyAccountLink();customerInfoPage=new CustomerInfoPageObject(driver);
 
-		// View my Account
-		homePage.clickToMyAccountLink();
-		customerInfoPage = new CustomerInfoPageObject(driver);
+	Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
 
-		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
+	Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(),firstName);Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(),lastName);
 
-		Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstName);
-		Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(), lastName);
+	Assert.assertEquals(customerInfoPage.getFirstSelectedTextInDayDropdown(),dateOfBirthDay);Assert.assertEquals(customerInfoPage.getFirstSelectedTextInMonthDropdown(),dateOfBirthMonth);Assert.assertEquals(customerInfoPage.getFirstSelectedTextInYearDropdown(),dateOfBirthYear);
 
-		Assert.assertEquals(customerInfoPage.getFirstSelectedTextInDayDropdown(), dateOfBirthDay);
-		Assert.assertEquals(customerInfoPage.getFirstSelectedTextInMonthDropdown(), dateOfBirthMonth);
-		Assert.assertEquals(customerInfoPage.getFirstSelectedTextInYearDropdown(), dateOfBirthYear);
+	Assert.assertEquals(customerInfoPage.getEmailTextboxValue(),email);Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(),companyName);
 
-		Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), email);
-		Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(), companyName);
-
-		Verify.verify(customerInfoPage.isGenderMaleRadioButtonSelected());
+	Verify.verify(customerInfoPage.isGenderMaleRadioButtonSelected());
 
 	}
 

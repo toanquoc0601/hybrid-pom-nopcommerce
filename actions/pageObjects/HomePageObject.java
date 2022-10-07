@@ -14,19 +14,20 @@ public class HomePageObject extends AbstractPage{
 	// Không có kiểu trả về/ no data type
 	// Cùng tên với tên Class
 	public HomePageObject(WebDriver driver) {
-//		WebDriver driver gọi là biến cục bộ (Local)
-		this.driver = driver;
+		PageGerenatorManager.getHomePage(driver);
 	}
 
 
-	public void clickToRegisterLink() {
+	public RegisterPageObject clickToRegisterLink() {
 		waitToElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
+		return PageGerenatorManager.getRegisterPage(driver);
 	}
 
-	public void clickToLoginLink() {
+	public LoginPageObject clickToLoginLink() {
 		waitToElementClickable(driver, HomePageUI.LOGIN_LINK);
-		clickToElement(driver, HomePageUI.LOGIN_LINK);		
+		clickToElement(driver, HomePageUI.LOGIN_LINK);	
+		return PageGerenatorManager.getLoginPage(driver);
 	}
 
 
@@ -42,9 +43,10 @@ public class HomePageObject extends AbstractPage{
 	
 	}
 
-	public void clickToMyAccountLink() {
+	public CustomerInfoPageObject clickToMyAccountLink() {
 		waitToElementClickable(driver, HomePageUI.MYACCOUNT_LINK);
-		clickToElement(driver, HomePageUI.MYACCOUNT_LINK);		
+		clickToElement(driver, HomePageUI.MYACCOUNT_LINK);	
+		return PageGerenatorManager.getCustomerInfoPage(driver);
 	}
 
 

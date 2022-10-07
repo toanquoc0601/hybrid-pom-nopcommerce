@@ -22,9 +22,10 @@ public class LoginPageObject extends AbstractPage{
 		
 	} 
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitToElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return PageGerenatorManager.getHomePage(driver);
 	}
 	
 
