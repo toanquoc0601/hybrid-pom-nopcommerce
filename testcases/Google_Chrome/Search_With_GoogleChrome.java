@@ -14,37 +14,38 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Find_With_GoogleChrome {
+public class Search_With_GoogleChrome {
 	WebDriver driver;
 	WebDriverWait explicitWait;
 	JavascriptExecutor jsExecutor;
 	WebElement element;
-	public String valueFind = "Demo with selenium";
+	public String valueSearch = "Demo with selenium";
 	public String searchElement = "//input[@title='Tìm kiếm']";
 	@BeforeClass
 	public void beforeClass() {
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		explicitWait = new WebDriverWait(driver, 30);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 	@Test
-	public void TC_01_Find_And_Verify_Google_With_Submit() {
-		//submit
+	public void TC_01_Search_And_Verify_Google_With_Submit() {
+		
 		driver.get("https://www.google.com.vn/");
 		
 		waitToElementVisuble(driver, searchElement);
 		
 		highlightElement(driver, searchElement);
 		
-		driver.findElement(By.xpath(searchElement)).sendKeys("Demo with selenium");
+		driver.findElement(By.xpath(searchElement)).sendKeys(valueSearch);
 		
 		driver.findElement(By.xpath(searchElement)).submit();
 		
-		Assert.assertEquals(driver.findElement(By.xpath("//input[@role='combobox']")).getAttribute("value"), "Demo with selenium");
-		
+		Assert.assertEquals(driver.findElement(By.xpath("//input[@role='combobox']")).getAttribute("value"), valueSearch);
+	
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='search']//h3[text()='Demo with selenium']")).isDisplayed());
+			
 	}
 	@AfterClass
 	public void afterClass() {
