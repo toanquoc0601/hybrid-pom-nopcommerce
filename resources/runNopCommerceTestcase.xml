@@ -5,14 +5,14 @@
 		<parameter name="browser" value="chrome_ui" />
 		<classes>
 			<class
-				name="com.nopcommerce.user.Level_05_Register_Login_Page_Factory" />
+				name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor" />
 		</classes>
 	</test>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox_ui" />
 		<classes>
 			<class
-				name="com.nopcommerce.user.Level_05_Register_Login_Page_Factory" />
+				name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor" />
 		</classes>
 	</test>
 <!-- 	<test name="Run on edge_chromium"> -->

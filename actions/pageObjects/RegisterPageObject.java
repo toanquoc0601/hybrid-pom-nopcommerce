@@ -62,7 +62,7 @@ public class RegisterPageObject extends AbstractPage{
 	public HomePageObject clickToLogoutLink() {
 		waitToElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
-		return PageGerenatorManager.getHomePage(driver);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 	

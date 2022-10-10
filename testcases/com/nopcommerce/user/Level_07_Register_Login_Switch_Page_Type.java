@@ -26,7 +26,7 @@ import pageObjects.LoginPageObject;
 import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
 
-public class Level_06_Register_Login_Generator extends AbstractTest {
+public class Level_07_Register_Login_Switch_Page_Type extends AbstractTest {
 	WebDriver driver;
 	String firstName = "Toan", lastName = "Quoc", dateOfBirthDay = "6", dateOfBirthMonth = "March",
 			dateOfBirthYear = "1996", email = generateEmail(), companyName = "Company", Password = "123123";
@@ -87,6 +87,9 @@ public class Level_06_Register_Login_Generator extends AbstractTest {
 		Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(), companyName);
 		Verify.verify(customerInfoPage.isGenderMaleRadioButtonSelected());
 
+	}
+	public void TC_04_Switch_Page() {
+		
 	}
 
 	public String generateEmail() {

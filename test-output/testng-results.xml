@@ -1,71 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Nop Commerce" duration-ms="40288" started-at="2022-10-07T15:22:18Z" finished-at="2022-10-07T15:22:59Z">
+  <suite name="Default suite" duration-ms="7628" started-at="2022-10-10T08:51:40Z" finished-at="2022-10-10T08:51:48Z">
     <groups>
     </groups>
-    <test name="Run on Chrome" duration-ms="20064" started-at="2022-10-07T15:22:18Z" finished-at="2022-10-07T15:22:38Z">
-      <class name="com.nopcommerce.user.Level_05_Register_Login_Page_Factory">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@cc285f4]" name="beforeClass" is-config="true" duration-ms="7182" started-at="2022-10-07T15:22:18Z" finished-at="2022-10-07T15:22:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome_ui]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="7628" started-at="2022-10-10T08:51:40Z" finished-at="2022-10-10T08:51:48Z">
+      <class name="Google_Chrome.Find_With_GoogleChrome">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Google_Chrome.Find_With_GoogleChrome@4cc0edeb]" name="beforeClass" is-config="true" duration-ms="3159" started-at="2022-10-10T08:51:40Z" finished-at="2022-10-10T08:51:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@cc285f4]" name="TC_01_Register" duration-ms="6638" started-at="2022-10-07T15:22:25Z" finished-at="2022-10-07T15:22:32Z">
+        <test-method status="PASS" signature="TC_01_Find_And_Verify_Google_With_Submit()[pri:0, instance:Google_Chrome.Find_With_GoogleChrome@4cc0edeb]" name="TC_01_Find_And_Verify_Google_With_Submit" duration-ms="4447" started-at="2022-10-10T08:51:43Z" finished-at="2022-10-10T08:51:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Register -->
-        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@cc285f4]" name="TC_02_Login" duration-ms="2676" started-at="2022-10-07T15:22:32Z" finished-at="2022-10-07T15:22:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Login -->
-        <test-method status="PASS" signature="TC_03_Verify_Account()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@cc285f4]" name="TC_03_Verify_Account" duration-ms="2795" started-at="2022-10-07T15:22:35Z" finished-at="2022-10-07T15:22:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Verify_Account -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@cc285f4]" name="afterClass" is-config="true" duration-ms="730" started-at="2022-10-07T15:22:38Z" finished-at="2022-10-07T15:22:38Z">
+        </test-method> <!-- TC_01_Find_And_Verify_Google_With_Submit -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:Google_Chrome.Find_With_GoogleChrome@4cc0edeb]" name="afterClass" is-config="true" duration-ms="0" started-at="2022-10-10T08:51:48Z" finished-at="2022-10-10T08:51:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.user.Level_05_Register_Login_Page_Factory -->
-    </test> <!-- Run on Chrome -->
-    <test name="Run on Firefox" duration-ms="20168" started-at="2022-10-07T15:22:38Z" finished-at="2022-10-07T15:22:59Z">
-      <class name="com.nopcommerce.user.Level_05_Register_Login_Page_Factory">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@604ed9f0]" name="beforeClass" is-config="true" duration-ms="6122" started-at="2022-10-07T15:22:38Z" finished-at="2022-10-07T15:22:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox_ui]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@604ed9f0]" name="TC_01_Register" duration-ms="8002" started-at="2022-10-07T15:22:45Z" finished-at="2022-10-07T15:22:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_Register -->
-        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@604ed9f0]" name="TC_02_Login" duration-ms="2639" started-at="2022-10-07T15:22:53Z" finished-at="2022-10-07T15:22:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Login -->
-        <test-method status="PASS" signature="TC_03_Verify_Account()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@604ed9f0]" name="TC_03_Verify_Account" duration-ms="2187" started-at="2022-10-07T15:22:55Z" finished-at="2022-10-07T15:22:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Verify_Account -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_05_Register_Login_Page_Factory@604ed9f0]" name="afterClass" is-config="true" duration-ms="1217" started-at="2022-10-07T15:22:57Z" finished-at="2022-10-07T15:22:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.user.Level_05_Register_Login_Page_Factory -->
-    </test> <!-- Run on Firefox -->
-  </suite> <!-- Nop Commerce -->
+      </class> <!-- Google_Chrome.Find_With_GoogleChrome -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

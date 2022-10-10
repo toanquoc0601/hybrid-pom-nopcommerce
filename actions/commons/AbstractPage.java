@@ -8,14 +8,19 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.interactions.Actions;
+
+import pageObjects.CustomerInfoPageObject;
+import pageObjects.PageGeneratorManager;
+import pageUIs.AbstractPageUI;
 
 public class AbstractPage {
 
+	
 	public void openPageUrl(WebDriver driver, String URL) {
 		driver.get(URL);
 	}
@@ -32,6 +37,7 @@ public class AbstractPage {
 		return driver.getPageSource();
 	}
 
+	
 	public void backToPage(WebDriver driver) {
 		driver.navigate().back();
 	}
@@ -113,11 +119,20 @@ public class AbstractPage {
 		element = getElement(driver, locator);
 		element.click();
 	}
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		element.click();
+	}
 
 	public void senkeyToElement(WebDriver driver, String locator, String value) {
 		element = getElement(driver, locator);
 		element.clear();
 		element.sendKeys(value);
+	}
+	public void senkeyToElement(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		element.clear();
+		element.sendKeys(values);
 	}
 
 	public void selectItemInDropDown(WebDriver driver, String locator, String value) {
@@ -197,6 +212,9 @@ public class AbstractPage {
 
 	public boolean isElementDisplayed(WebDriver driver, String locator) {
 		return getElement(driver, locator).isDisplayed();
+	}
+	public boolean isElementDisplayed(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).isDisplayed();
 	}
 
 	public boolean isElementEnable(WebDriver driver, String locator) {
@@ -361,19 +379,57 @@ public class AbstractPage {
 
 	public void waitToElementVisuble(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
-		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+	}
+	public void waitToElementVisuble(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
 	}
 
 	public void waitToElementInvisuble(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
+	public void waitToElementInvisuble(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
 
 	public void waitToElementClickable(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 	}
-
+	
+	public void waitToElementClickable(WebDriver driver, String locator, String... value) {
+		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator,value))));
+	}
+	
+	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		
+		switch (pageName) {
+		case "Addresses":
+			return PageGeneratorManager.getAddressesPage(driver);
+		case "Orders":
+			return PageGeneratorManager.getOrdersPage(driver);
+		case "Downloadable products":
+			return PageGeneratorManager.getDownloadableProductsPage(driver);
+		default:
+			return PageGeneratorManager.getMyProductInfoPage(driver);
+		}
+		
+	}
+	public String getDynamicLocator(String locator, String... values) {
+		locator = String.format(locator, (Object[])values);
+		return locator;
+	}
+	public void openLinkWithPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+	}
+	
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private WebElement element;

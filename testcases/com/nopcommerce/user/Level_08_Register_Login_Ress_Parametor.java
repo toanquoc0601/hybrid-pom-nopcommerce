@@ -1,15 +1,10 @@
 package com.nopcommerce.user;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -20,13 +15,17 @@ import com.google.common.base.Verify;
 
 import commons.AbstractPage;
 import commons.AbstractTest;
+import pageObjects.AddressesPageObject;
 import pageObjects.CustomerInfoPageObject;
+import pageObjects.DownloadableProductsPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.MyProductPageObject;
+import pageObjects.OrdersPageObject;
 import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
 
-public class Level_06_Register_Login_Generator extends AbstractTest {
+public class Level_08_Register_Login_Ress_Parametor extends AbstractTest {
 	WebDriver driver;
 	String firstName = "Toan", lastName = "Quoc", dateOfBirthDay = "6", dateOfBirthMonth = "March",
 			dateOfBirthYear = "1996", email = generateEmail(), companyName = "Company", Password = "123123";
@@ -88,6 +87,20 @@ public class Level_06_Register_Login_Generator extends AbstractTest {
 		Verify.verify(customerInfoPage.isGenderMaleRadioButtonSelected());
 
 	}
+	@Test
+	public void TC_04_Switch_Page() {
+		customerInfoPage.openLinkWithPageName(driver, "Addresses");
+		addressPage = PageGeneratorManager.getAddressesPage(driver);
+		
+		addressPage.openLinkWithPageName(driver, "Customer info");
+		customerInfoPage = PageGeneratorManager.getCustomerInfoPage(driver);
+		
+		customerInfoPage.openLinkWithPageName(driver, "Downloadable products");
+		downloadProductPage = PageGeneratorManager.getDownloadableProductsPage(driver);
+		
+		downloadProductPage.openLinkWithPageName(driver, "My product reviews");
+		myProductPage = PageGeneratorManager.getMyProductInfoPage(driver);
+	}
 
 	public String generateEmail() {
 		Random random = new Random();
@@ -120,4 +133,8 @@ public class Level_06_Register_Login_Generator extends AbstractTest {
 	RegisterPageObject registerPage;
 	LoginPageObject loginPage;
 	CustomerInfoPageObject customerInfoPage;
+	AddressesPageObject addressPage;
+	DownloadableProductsPageObject downloadProductPage;
+	MyProductPageObject myProductPage;
+	OrdersPageObject oderPage;
 }
