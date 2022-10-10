@@ -69,7 +69,7 @@ public class Level_08_Register_Login_Ress_Parametor extends AbstractTest {
 		//Chuyển Page
 		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-		Assert.assertTrue(homePage.isLoginLinkDisplayed());
+		Assert.assertTrue(homePage.isDropDownMultiple(driver, ""));
 	}
 
 	@Test

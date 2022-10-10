@@ -20,7 +20,7 @@ public class Search_With_GoogleChrome {
 	JavascriptExecutor jsExecutor;
 	WebElement element;
 	public String valueSearch = "Demo with selenium";
-	public String searchTextbox = "//input[@title='Tìm kiếm']";
+	public String searchElement = "//input[@title='Tìm kiếm']";
 	@BeforeClass
 	public void beforeClass() {
 		String projectPath = System.getProperty("user.dir");
@@ -34,25 +34,22 @@ public class Search_With_GoogleChrome {
 		
 		driver.get("https://www.google.com.vn/");
 		
-		waitToElementVisuble(driver, searchTextbox);
+		waitToElementVisuble(driver, searchElement);
 		
-		highlightElement(driver, searchTextbox);
+		highlightElement(driver, searchElement);
 		
-		getElement(driver, searchTextbox).sendKeys(valueSearch);
+		driver.findElement(By.xpath(searchElement)).sendKeys(valueSearch);
 		
-		getElement(driver, searchTextbox).submit();
+		driver.findElement(By.xpath(searchElement)).submit();
 		
-		Assert.assertEquals(getElement(driver, "//input[@role='combobox']").getAttribute("value"), valueSearch);
-		
-		Assert.assertTrue(getElement(driver, "//div[@id='search']//h3[text()='Demo with selenium']").isDisplayed());
+		Assert.assertEquals(driver.findElement(By.xpath("//input[@role='combobox']")).getAttribute("value"), valueSearch);
+	
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='search']//h3[text()='Demo with selenium']")).isDisplayed());
+			
 	}
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
-	}
-	
-	public WebElement getElement(WebDriver driver, String locator) {
-		return driver.findElement(By.xpath(locator));
 	}
 	
 	public void highlightElement(WebDriver driver, String locator) {
