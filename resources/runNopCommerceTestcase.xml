@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nop Commerce" parallel="false">
+	<listeners>
+		<listener class-name= "commons.MethodListener"/>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+	
+	</listeners>
+
 
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome_ui" />
@@ -8,13 +15,13 @@
 				name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor" />
 		</classes>
 	</test>
-	<test name="Run on Firefox">
-		<parameter name="browser" value="firefox_ui" />
-		<classes>
-			<class
-				name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor" />
-		</classes>
-	</test>
+<!-- 	<test name="Run on Firefox"> -->
+<!-- 		<parameter name="browser" value="firefox_ui" /> -->
+<!-- 		<classes> -->
+<!-- 			<class -->
+<!-- 				name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 <!-- 	<test name="Run on edge_chromium"> -->
 <!-- 		<parameter name="browser" value="edge_chromium" /> -->
 <!-- 		<classes> -->

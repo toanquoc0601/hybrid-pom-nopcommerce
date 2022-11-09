@@ -57,17 +57,17 @@ public class Level_02_Abstract_Page_I extends AbstractPage{
 		clickToElement(driver, "//a[@class=\"ico-register\"]");
 		clickToElement(driver, "(//input[@type=\"radio\"])[1]");
 		
-		senkeyToElement(driver, "//input[@name=\"FirstName\"]", firstName);
-		senkeyToElement(driver, "//input[@name=\"LastName\"]", lastName);
+		sendkeyToElement(driver, "//input[@name=\"FirstName\"]", firstName);
+		sendkeyToElement(driver, "//input[@name=\"LastName\"]", lastName);
 		
 		selectItemInDropDown(driver, "//select[@name='DateOfBirthDay']" , dateOfBirthDay);
 		selectItemInDropDown(driver, "//select[@name='DateOfBirthMonth']",dateOfBirthMonth);	
 		selectItemInDropDown(driver, "//select[@name='DateOfBirthYear']",dateOfBirthYear);
 		
-		senkeyToElement(driver, "//input[@name=\"Email\"]", email);
-		senkeyToElement(driver, "//input[@name=\"Company\"]", companyName);
-		senkeyToElement(driver, "//input[@name=\"Password\"]", Password);
-		senkeyToElement(driver, "//input[@name=\"ConfirmPassword\"]", Password);
+		sendkeyToElement(driver, "//input[@name=\"Email\"]", email);
+		sendkeyToElement(driver, "//input[@name=\"Company\"]", companyName);
+		sendkeyToElement(driver, "//input[@name=\"Password\"]", Password);
+		sendkeyToElement(driver, "//input[@name=\"ConfirmPassword\"]", Password);
 		
 		clickToElement(driver, "//button[@id='register-button']");
 		
@@ -77,8 +77,8 @@ public class Level_02_Abstract_Page_I extends AbstractPage{
 		
 		clickToElement(driver, "//a[@class='ico-login']");
 		
-		senkeyToElement(driver, "//input[@id='Email']", email);
-		senkeyToElement(driver, "//input[@id='Password']", Password);
+		sendkeyToElement(driver, "//input[@id='Email']", email);
+		sendkeyToElement(driver, "//input[@id='Password']", Password);
 
 		clickToElement(driver, "//button[contains(text(),'Log in')]");
 		

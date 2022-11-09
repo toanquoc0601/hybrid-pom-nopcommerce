@@ -1,90 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:37,106] Click button RegisterLink
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:39,840] clickToGenderMailRadioButton
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:40,148] clickToGenderMailRadioButton
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:40,563] clickToGenderMailRadioButton
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:40,746] selectDayDropdown
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:41,153] selectMonthDropdown
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:41,307] selectYearDropdown
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:41,468] inputToEmailTextBox
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:41,684] inputToPasswordTextBox
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:41,859] inputToConfirmPasswordTextBox
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:42,045] inputToCompanyTextbox
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:42,237] clickToRegisterButton
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:43,732] Hahaha
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:49,292] Test Verify
+<br>]]>
+    </line>
+    <line>
+      <![CDATA[[INFO ] [2022-11-09 21:48:49,369]  -------------------------- PASSED -------------------------- 
+<br>]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18669" started-at="2022-10-10T09:53:57Z" finished-at="2022-10-10T09:54:16Z">
+  <suite name="Nop Commerce" duration-ms="25596" started-at="2022-11-09T14:48:29Z" finished-at="2022-11-09T14:48:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18669" started-at="2022-10-10T09:53:57Z" finished-at="2022-10-10T09:54:16Z">
-      <class name="Google_Chrome.Search_With_GoogleChrome">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Google_Chrome.Search_With_GoogleChrome@4cc0edeb]" name="beforeClass" is-config="true" duration-ms="3115" started-at="2022-10-10T09:53:57Z" finished-at="2022-10-10T09:54:00Z">
+    <test name="Run on Chrome" duration-ms="25596" started-at="2022-11-09T14:48:29Z" finished-at="2022-11-09T14:48:54Z">
+      <class name="com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="beforeClass" is-config="true" duration-ms="7826" started-at="2022-11-09T14:48:29Z" finished-at="2022-11-09T14:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome_ui]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="TC_01_Search_And_Verify_Google_With_Submit()[pri:0, instance:Google_Chrome.Search_With_GoogleChrome@4cc0edeb]" name="TC_01_Search_And_Verify_Google_With_Submit" duration-ms="14810" started-at="2022-10-10T09:54:00Z" finished-at="2022-10-10T09:54:15Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='search']//h3[text()='Demo with selenium']"}
-  (Session info: chrome=106.0.5249.103)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-DSGFKSP', ip: '192.168.1.24', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.103, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:59876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d6a7ecedfd93dabc4e7f6ade5d6283c8
-*** Element info: {Using=xpath, value=//div[@id='search']//h3[text()='Demo with selenium']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='search']//h3[text()='Demo with selenium']"}
-  (Session info: chrome=106.0.5249.103)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-DSGFKSP', ip: '192.168.1.24', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.103, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:59876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d6a7ecedfd93dabc4e7f6ade5d6283c8
-*** Element info: {Using=xpath, value=//div[@id='search']//h3[text()='Demo with selenium']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at Google_Chrome.Search_With_GoogleChrome.TC_01_Search_And_Verify_Google_With_Submit(Search_With_GoogleChrome.java:47)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="TC_01_Register" duration-ms="7566" started-at="2022-11-09T14:48:37Z" finished-at="2022-11-09T14:48:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:37,106] Click button RegisterLink
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:39,840] clickToGenderMailRadioButton
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:40,148] clickToGenderMailRadioButton
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:40,563] clickToGenderMailRadioButton
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:40,746] selectDayDropdown
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:41,153] selectMonthDropdown
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:41,307] selectYearDropdown
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:41,468] inputToEmailTextBox
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:41,684] inputToPasswordTextBox
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:41,859] inputToConfirmPasswordTextBox
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:42,045] inputToCompanyTextbox
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:42,237] clickToRegisterButton
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:43,732] Hahaha
+<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="TC_02_Login" duration-ms="2123" started-at="2022-11-09T14:48:44Z" finished-at="2022-11-09T14:48:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Search_And_Verify_Google_With_Submit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Google_Chrome.Search_With_GoogleChrome@4cc0edeb]" name="afterClass" is-config="true" duration-ms="711" started-at="2022-10-10T09:54:15Z" finished-at="2022-10-10T09:54:16Z">
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_Verify_Account()[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="TC_03_Verify_Account" duration-ms="2561" started-at="2022-11-09T14:48:46Z" finished-at="2022-11-09T14:48:49Z">
+          <reporter-output>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:49,292] Test Verify
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2022-11-09 21:48:49,369]  -------------------------- PASSED -------------------------- 
+<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_03_Verify_Account -->
+        <test-method status="PASS" signature="TC_04_Switch_Page()[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="TC_04_Switch_Page" duration-ms="2884" started-at="2022-11-09T14:48:49Z" finished-at="2022-11-09T14:48:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_Switch_Page -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor@13c27452]" name="afterClass" is-config="true" duration-ms="2584" started-at="2022-11-09T14:48:52Z" finished-at="2022-11-09T14:48:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- Google_Chrome.Search_With_GoogleChrome -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nopcommerce.user.Level_08_Register_Login_Ress_Parametor -->
+    </test> <!-- Run on Chrome -->
+  </suite> <!-- Nop Commerce -->
 </testng-results>

@@ -42,18 +42,43 @@ public class Level_08_Register_Login_Ress_Parametor extends AbstractTest {
 		// Register
 		homePage = PageGeneratorManager.getHomePage(driver);
 		//Chuyển page
+		log.info("Click button RegisterLink");
 		registerPage = homePage.clickToRegisterLink();
+		
+		log.info("clickToGenderMailRadioButton");
 		registerPage.clickToGenderMailRadioButton();
+		
+		log.info("clickToGenderMailRadioButton");
 		registerPage.inputToFirstNameTextbox(firstName);
+		
+		log.info("clickToGenderMailRadioButton");
 		registerPage.inputToLastNameTextbox(lastName);
+		
+		log.info("selectDayDropdown");
 		registerPage.selectDayDropdown(dateOfBirthDay);
+
+		log.info("selectMonthDropdown");
 		registerPage.selectMonthDropdown(dateOfBirthMonth);
+
+		log.info("selectYearDropdown");
 		registerPage.selectYearDropdown(dateOfBirthYear);
+
+		log.info("inputToEmailTextBox");
 		registerPage.inputToEmailTextBox(email);
+
+		log.info("inputToPasswordTextBox");
 		registerPage.inputToPasswordTextBox(Password);
+
+		log.info("inputToConfirmPasswordTextBox");
 		registerPage.inputToConfirmPasswordTextBox(Password);
+
+		log.info("inputToCompanyTextbox");
 		registerPage.inputToCompanyTextbox(companyName);
+
+		log.info("clickToRegisterButton");
 		registerPage.clickToRegisterButton();
+		
+		log.info("Hahaha");
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		//Chuyển page
 		homePage = registerPage.clickToLogoutLink();
@@ -69,7 +94,7 @@ public class Level_08_Register_Login_Ress_Parametor extends AbstractTest {
 		//Chuyển Page
 		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-		Assert.assertTrue(homePage.isDropDownMultiple(driver, ""));
+		//Assert.assertTrue(homePage.isDropDownMultiple(driver, ""));
 	}
 
 	@Test
@@ -85,6 +110,9 @@ public class Level_08_Register_Login_Ress_Parametor extends AbstractTest {
 		Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), email);
 		Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(), companyName);
 		Verify.verify(customerInfoPage.isGenderMaleRadioButtonSelected());
+		
+		log.info("Test Verify");
+		verifyTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
 
 	}
 	@Test

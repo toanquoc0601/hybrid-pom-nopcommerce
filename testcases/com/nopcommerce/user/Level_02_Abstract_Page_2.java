@@ -51,17 +51,17 @@ public class Level_02_Abstract_Page_2 {
 		abtractPage.clickToElement(driver, "//a[@class=\"ico-register\"]");
 		abtractPage.clickToElement(driver, "(//input[@type=\"radio\"])[1]");
 		
-		abtractPage.senkeyToElement(driver, "//input[@name=\"FirstName\"]", firstName);
-		abtractPage.senkeyToElement(driver, "//input[@name=\"LastName\"]", lastName);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"FirstName\"]", firstName);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"LastName\"]", lastName);
 		
 		abtractPage.selectItemInDropDown(driver, "//select[@name='DateOfBirthDay']" , dateOfBirthDay);
 		abtractPage.selectItemInDropDown(driver, "//select[@name='DateOfBirthMonth']",dateOfBirthMonth);	
 		abtractPage.selectItemInDropDown(driver, "//select[@name='DateOfBirthYear']",dateOfBirthYear);
 		
-		abtractPage.senkeyToElement(driver, "//input[@name=\"Email\"]", email);
-		abtractPage.senkeyToElement(driver, "//input[@name=\"Company\"]", companyName);
-		abtractPage.senkeyToElement(driver, "//input[@name=\"Password\"]", Password);
-		abtractPage.senkeyToElement(driver, "//input[@name=\"ConfirmPassword\"]", Password);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"Email\"]", email);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"Company\"]", companyName);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"Password\"]", Password);
+		abtractPage.sendkeyToElement(driver, "//input[@name=\"ConfirmPassword\"]", Password);
 		
 		abtractPage.clickToElement(driver, "//button[@id='register-button']");
 		
@@ -71,8 +71,8 @@ public class Level_02_Abstract_Page_2 {
 		
 		abtractPage.clickToElement(driver, "//a[@class='ico-login']");
 		
-		abtractPage.senkeyToElement(driver, "//input[@id='Email']", email);
-		abtractPage.senkeyToElement(driver, "//input[@id='Password']", Password);
+		abtractPage.sendkeyToElement(driver, "//input[@id='Email']", email);
+		abtractPage.sendkeyToElement(driver, "//input[@id='Password']", Password);
 
 		abtractPage.clickToElement(driver, "//button[contains(text(),'Log in')]");
 		

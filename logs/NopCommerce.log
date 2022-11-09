@@ -1,0 +1,43 @@
+[INFO ] [2022-11-09 21:33:26,711] Click button RegisterLink
+[INFO ] [2022-11-09 21:33:28,102] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:33:28,247] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:33:28,410] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:33:28,596] selectDayDropdown
+[INFO ] [2022-11-09 21:33:28,795] selectMonthDropdown
+[INFO ] [2022-11-09 21:33:28,947] selectYearDropdown
+[INFO ] [2022-11-09 21:33:29,101] inputToEmailTextBox
+[INFO ] [2022-11-09 21:33:29,280] inputToPasswordTextBox
+[INFO ] [2022-11-09 21:33:29,442] inputToConfirmPasswordTextBox
+[INFO ] [2022-11-09 21:33:29,659] inputToCompanyTextbox
+[INFO ] [2022-11-09 21:33:29,829] clickToRegisterButton
+[INFO ] [2022-11-09 21:33:30,842] Hahaha
+[INFO ] [2022-11-09 21:35:37,347] Click button RegisterLink
+[INFO ] [2022-11-09 21:35:38,721] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:35:38,849] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:35:38,997] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:35:39,191] selectDayDropdown
+[INFO ] [2022-11-09 21:35:39,399] selectMonthDropdown
+[INFO ] [2022-11-09 21:35:39,552] selectYearDropdown
+[INFO ] [2022-11-09 21:35:39,704] inputToEmailTextBox
+[INFO ] [2022-11-09 21:35:39,862] inputToPasswordTextBox
+[INFO ] [2022-11-09 21:35:40,074] inputToConfirmPasswordTextBox
+[INFO ] [2022-11-09 21:35:40,234] inputToCompanyTextbox
+[INFO ] [2022-11-09 21:35:40,382] clickToRegisterButton
+[INFO ] [2022-11-09 21:35:41,469] Hahaha
+[INFO ] [2022-11-09 21:35:46,884] Test Verify
+[INFO ] [2022-11-09 21:35:46,944]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-11-09 21:48:37,106] Click button RegisterLink
+[INFO ] [2022-11-09 21:48:39,840] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:48:40,148] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:48:40,563] clickToGenderMailRadioButton
+[INFO ] [2022-11-09 21:48:40,746] selectDayDropdown
+[INFO ] [2022-11-09 21:48:41,153] selectMonthDropdown
+[INFO ] [2022-11-09 21:48:41,307] selectYearDropdown
+[INFO ] [2022-11-09 21:48:41,468] inputToEmailTextBox
+[INFO ] [2022-11-09 21:48:41,684] inputToPasswordTextBox
+[INFO ] [2022-11-09 21:48:41,859] inputToConfirmPasswordTextBox
+[INFO ] [2022-11-09 21:48:42,045] inputToCompanyTextbox
+[INFO ] [2022-11-09 21:48:42,237] clickToRegisterButton
+[INFO ] [2022-11-09 21:48:43,732] Hahaha
+[INFO ] [2022-11-09 21:48:49,292] Test Verify
+[INFO ] [2022-11-09 21:48:49,369]  -------------------------- PASSED -------------------------- 

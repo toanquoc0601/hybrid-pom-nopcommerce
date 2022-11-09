@@ -26,11 +26,11 @@ public class LoginPageObject extends AbstracPage{
 
 	public void inputToEmailTextBox(String email) {
 		waitToElementVisuble(driver, emailTextbox);
-		senkeyToElement(driver, emailTextbox, email);
+		sendkeyToElement(driver, emailTextbox, email);
 	}
 	public void inputToPasswordTextBox(String password) {
 		waitToElementVisuble(driver, passwordTextbox);
-		senkeyToElement(driver, passwordTextbox, password);
+		sendkeyToElement(driver, passwordTextbox, password);
 	} 
 
 	public void clickToLoginButton() {

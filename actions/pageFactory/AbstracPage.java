@@ -112,7 +112,7 @@ public class AbstracPage {
 		element.click();
 	}
 
-	public void senkeyToElement(WebDriver driver, WebElement element, String value) {
+	public void sendkeyToElement(WebDriver driver, WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
 	}

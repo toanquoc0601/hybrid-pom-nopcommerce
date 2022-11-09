@@ -47,13 +47,13 @@ public class RegisterPageObject extends AbstracPage {
 
 	public void inputToFirstNameTextbox(String firstName) {
 		waitToElementVisuble(driver, firstNameTextbox);
-		senkeyToElement(driver, firstNameTextbox, firstName);
+		sendkeyToElement(driver, firstNameTextbox, firstName);
 
 	}
 
 	public void inputToLastNameTextbox(String lastName) {
 		waitToElementVisuble(driver, lastNameTextbox);
-		senkeyToElement(driver, lastNameTextbox, lastName);
+		sendkeyToElement(driver, lastNameTextbox, lastName);
 	}
 
 	public void selectDayDropdown(String dateOfBirthDay) {
@@ -73,22 +73,22 @@ public class RegisterPageObject extends AbstracPage {
 
 	public void inputToEmailTextBox(String email) {
 		waitToElementVisuble(driver, emailTextbox);
-		senkeyToElement(driver, emailTextbox, email);
+		sendkeyToElement(driver, emailTextbox, email);
 	}
 
 	public void inputToPasswordTextBox(String password) {
 		waitToElementVisuble(driver, passwordTextBox);
-		senkeyToElement(driver, passwordTextBox, password);
+		sendkeyToElement(driver, passwordTextBox, password);
 	}
 
 	public void inputToConfirmPasswordTextBox(String password) {
 		waitToElementVisuble(driver, comfirmPasswordTextbox);
-		senkeyToElement(driver, comfirmPasswordTextbox, password);
+		sendkeyToElement(driver, comfirmPasswordTextbox, password);
 	}
 
 	public void inputToCompanyTextbox(String companyName) {
 		waitToElementVisuble(driver, companyTextBox);
-		senkeyToElement(driver, companyTextBox, companyName);
+		sendkeyToElement(driver, companyTextBox, companyName);
 	}
 
 	public void clickToRegisterButton() {

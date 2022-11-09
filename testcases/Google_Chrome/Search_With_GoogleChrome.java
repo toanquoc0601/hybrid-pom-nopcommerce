@@ -7,15 +7,20 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Search_With_GoogleChrome {
-	WebDriver driver;
+import commons.AbstractPage;
+import pageFactory.AbstracPage;
+
+public class Search_With_GoogleChrome extends AbstractPage{
+	ChromeDriver driver;
 	WebDriverWait explicitWait;
 	JavascriptExecutor jsExecutor;
 	WebElement element;
@@ -33,26 +38,29 @@ public class Search_With_GoogleChrome {
 
 	@Test
 	public void TC_01_Search_And_Verify_Google_With_Submit() {
-
-		driver.get("https://www.google.com.vn/");
-
-		waitToElementVisuble(driver, searchTextbox);
-
-		highlightElement(driver, searchTextbox);
-
-		getElement(driver, searchTextbox).sendKeys(valueSearch);
-
-		getElement(driver, searchTextbox).submit();
-
-		Assert.assertEquals(getElement(driver, "//input[@role='combobox']").getAttribute("value"), valueSearch);
 		
-		Assert.assertTrue(getElement(driver, "//div[@id='search']//h3[text()= '" + valueSearch + "']").isDisplayed());
+		driver.get("https://789d.club/");
+		waitToElementVisuble(driver, "//input[@id='username']");
+		sendkeyToElement(driver, "//input[@id='username']", "kakute02");
+		waitToElementVisuble(driver, "//div[@id='login']//input[@name='password']");
+		sendkeyToElement(driver, "//div[@id='login']//input[@name='password']", "quoc782442");
+		driver.findElement(By.xpath("//div[@id='login']//input[@name='password']")).submit();
+		
 
+		WebElement canvasElement = driver.findElement(By.id(""));
+		//Select the Pencil Tool
+		Select toolDraw = new Select(driver.findElement(By.id("")));
+		toolDraw.selectByValue("");
+		Actions builder = new Actions(driver);
+		builder.clickAndHold(canvasElement).moveByOffset(10, 50).
+		moveByOffset(50,10).
+		moveByOffset(-10,-50).
+		moveByOffset(-50,-10).release().perform();
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	public WebElement getElement(WebDriver driver, String locator) {

@@ -124,12 +124,12 @@ public class AbstractPage {
 		element.click();
 	}
 
-	public void senkeyToElement(WebDriver driver, String locator, String value) {
+	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 		element = getElement(driver, locator);
 		element.clear();
 		element.sendKeys(value);
 	}
-	public void senkeyToElement(WebDriver driver, String locator, String... values) {
+	public void sendkeyToElement(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		element.clear();
 		element.sendKeys(values);
